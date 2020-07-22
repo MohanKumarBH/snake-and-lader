@@ -1,4 +1,4 @@
-board{
+#board{
     position: relative;
     top: 50px;
     left: 50px;
@@ -10,6 +10,21 @@ board{
     background-color: sandybrown;
     border: 1px solid;
 }
+
+#renderDice p{
+    margin: 5px;
+}
+
+.dice-container{
+    display:flex;
+}
+
+.dice-container button {
+    width: 100px;
+    margin-right: 20px;
+    padding: 5px;
+ }
+
 .player{
     position: absolute;
     height: 40px;
