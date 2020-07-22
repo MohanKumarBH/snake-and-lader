@@ -16,8 +16,8 @@ window.rollDice=()=>{
             currentPlayer.position=ladder.end;
         }
     });
-    if(currentPlayer.position===position){
-        console.log("player has won");
+    if(currentPlayer.position === position){
+        alert("player has won", currentPlayer.name);
         hasWon=true;
     }
     if(currentPlayer.position===position){
@@ -34,11 +34,11 @@ window.rollDice=()=>{
 }
 
 const players=[{
-    name:"cloud",
+    name:"Mohan",
     position:0,
     color:"gold"
 },{
-    name:"Mohan",
+    name:"Anjan",
     position:0,
     color:"white"
 }];
