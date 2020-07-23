@@ -9,12 +9,14 @@ window.rollDice=()=>{
     
     console.log('you rolled',roll);
     let currentPlayer=players[currentPlayerTurn];
-    currentPlayer.position +=roll;
+   if( currentPlayer.position + roll <= position ){
+       currentPlayer.position += roll;
+   }
     ladders.forEach(ladder=>{
         if(ladder.start===currentPlayer.position){
             console.log("you stepped on a ladder");
             currentPlayer.position=ladder.end;
-        }
+        }   
     });
     if(currentPlayer.position === position){
         alert("player has won", currentPlayer.name);
@@ -25,7 +27,7 @@ window.rollDice=()=>{
         currentPlayer.position=position-dif;
     }
     currentPlayerTurn++;
-    if(currentPlayerTurn >= players.length){    
+    if(currentPlayerTurn > players.length-1){    
         currentPlayerTurn=0;
     }
     const displayValue=document.getElementById("renderDice");
